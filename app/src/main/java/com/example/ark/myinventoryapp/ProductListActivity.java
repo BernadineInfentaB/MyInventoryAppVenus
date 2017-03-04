@@ -70,6 +70,8 @@ public class ProductListActivity extends AppCompatActivity implements LoaderMana
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_NAME, "hankie");
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE, 50);
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY, 5);
+        values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_SIZE, 32);
+        values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_COLOR, "pink");
         values.put(ProductContract.ProductEntry.COLUMN_PRODUCT_IMAGE, image_path);
         values.put(ProductContract.ProductEntry.COLUMN_SUPPLIER_NBR, "9898989898");
 
@@ -109,6 +111,8 @@ public class ProductListActivity extends AppCompatActivity implements LoaderMana
                 ProductContract.ProductEntry.COLUMN_PRODUCT_NAME,
                 ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE,
                 ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY,
+                ProductContract.ProductEntry.COLUMN_PRODUCT_SIZE,
+                ProductContract.ProductEntry.COLUMN_PRODUCT_COLOR,
                 ProductContract.ProductEntry.COLUMN_PRODUCT_IMAGE,
                 ProductContract.ProductEntry.COLUMN_SUPPLIER_NBR};
 

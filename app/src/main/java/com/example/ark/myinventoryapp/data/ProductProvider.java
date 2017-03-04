@@ -157,8 +157,19 @@ public class ProductProvider extends ContentProvider {
                 throw new IllegalArgumentException("Upload an image of the product");
             }
         }
+        if (values.containsKey(ProductEntry.COLUMN_PRODUCT_SIZE)) {
+            Integer size = values.getAsInteger(ProductEntry.COLUMN_PRODUCT_SIZE);
+            if (size != null && size < 0) {
+                throw new IllegalArgumentException("Enter a valid size");
+            }
+        }
 
-
+        if (values.containsKey(ProductEntry.COLUMN_PRODUCT_COLOR)) {
+            String color = values.getAsString(ProductEntry.COLUMN_PRODUCT_COLOR);
+            if (color == null) {
+                throw new IllegalArgumentException("Product requires a color");
+            }
+        }
         if (values.containsKey(ProductEntry.COLUMN_SUPPLIER_NBR)) {
             String contact = values.getAsString(ProductEntry.COLUMN_SUPPLIER_NBR);
             if (contact == null) {

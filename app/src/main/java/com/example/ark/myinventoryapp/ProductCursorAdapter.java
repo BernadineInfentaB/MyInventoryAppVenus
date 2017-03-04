@@ -44,7 +44,10 @@ public class ProductCursorAdapter extends CursorAdapter {
         final TextView quantityTextView = (TextView) view.findViewById(R.id.quantity);
         int nameColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_NAME);
         int priceColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_PRICE);
+        int colorColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_COLOR);
+        int sizeColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_SIZE);
         int quantityColumnIndex = cursor.getColumnIndex(ProductContract.ProductEntry.COLUMN_PRODUCT_QUANTITY);
+
         int itemIdIndex = cursor.getColumnIndex(ProductContract.ProductEntry._ID);
         final int itemId = cursor.getInt(itemIdIndex);
 
